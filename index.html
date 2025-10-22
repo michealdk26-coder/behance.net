@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="/gg.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg gap-3 position-sticky top-0 background-color-white">
+        <div class="container-fluid gap-3">
+            <a class="navbar-brand" href="#">
+                <svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 152.5 28.2"
+                    aria-labelledby="IconBase-title-v-0-0-0-0-0-0-4-12-0-0 IconBase-description-v-0-0-0-0-0-0-4-12-0-0"
+                    role="graphics-symbol img" width="100.5" height="20.2"
+                    class="PrimaryNav-behanceLogo-jbj PrimaryNav-full-qXI" style="margin-top: -5px;" aria-hidden="true"
+                    data-iid="v-0-0-0-0-0-0-4-12-0-0">
+                    <title id="IconBase-title-v-0-0-0-0-0-0-4-12-0-0" fill="#191919">Behance</title>
+                    <desc id="IconBase-description-v-0-0-0-0-0-0-4-12-0-0" fill="#191919"></desc>
+                    <g fill="#191919"><!--[-->
+                        <path
+                            d="M13.1 0c1.3 0 2.5.1 3.6.4 1.1.2 2 .6 2.8 1.1.8.5 1.4 1.2 1.8 2.1.4.9.6 2 .6 3.2 0 1.4-.3 2.6-1 3.5-.6.9-1.6 1.7-2.8 2.3 1.7.5 3 1.4 3.8 2.6.8 1.2 1.3 2.7 1.3 4.4 0 1.4-.3 2.6-.8 3.6s-1.3 1.9-2.2 2.5c-.9.6-2 1.1-3.2 1.4-1.2.3-2.4.5-3.6.5H0V0h13.1zm-.8 11.2c1.1 0 2-.3 2.7-.8.7-.5 1-1.4 1-2.5 0-.6-.1-1.2-.3-1.6-.2-.4-.5-.7-.9-1-.4-.2-.8-.4-1.3-.5-.5-.1-1-.1-1.6-.1H6.1v6.5h6.2zm.3 11.8c.6 0 1.2-.1 1.7-.2s1-.3 1.4-.6c.4-.3.7-.6 1-1.1.2-.5.4-1.1.4-1.8 0-1.4-.4-2.4-1.2-3.1-.8-.6-1.9-.9-3.2-.9H6.1V23h6.5zm19.3-.1c.8.8 2 1.2 3.6 1.2 1.1 0 2.1-.3 2.9-.8.8-.6 1.3-1.2 1.5-1.8h4.9c-.8 2.4-2 4.1-3.6 5.2-1.6 1-3.5 1.6-5.8 1.6-1.6 0-3-.3-4.3-.8-1.3-.5-2.3-1.2-3.2-2.2-.9-.9-1.6-2-2-3.3-.5-1.3-.7-2.7-.7-4.3 0-1.5.2-2.9.7-4.2.5-1.3 1.2-2.4 2.1-3.4.9-.9 2-1.7 3.2-2.2 1.3-.5 2.6-.8 4.2-.8 1.7 0 3.2.3 4.5 1 1.3.7 2.3 1.5 3.1 2.7.8 1.1 1.4 2.4 1.8 3.8.2 1.4.3 2.8.2 4.4H30.5c0 1.6.6 3.1 1.4 3.9zm6.3-10.5c-.7-.7-1.8-1.1-3.1-1.1-.9 0-1.6.2-2.2.5-.6.3-1 .7-1.4 1.1-.4.4-.6.9-.7 1.4-.1.5-.2.9-.2 1.3h9c-.2-1.5-.7-2.5-1.4-3.2zM52.8 0v10.4h.1c.7-1.2 1.6-2 2.7-2.5s2.1-.8 3.2-.8c1.5 0 2.7.2 3.6.6.9.4 1.7 1 2.2 1.7.5.7.9 1.6 1.1 2.6.2 1 .3 2.1.3 3.4v12.3h-5.5V16.4c0-1.7-.3-2.9-.8-3.7-.5-.8-1.4-1.2-2.7-1.2-1.5 0-2.6.5-3.2 1.3-.7.9-1 2.4-1 4.4v10.5h-5.5V0h5.5zM70 10.6c.6-.9 1.3-1.5 2.2-2.1.9-.5 1.9-.9 3-1.1 1.1-.2 2.2-.3 3.3-.3 1 0 2 .1 3.1.2 1 .1 2 .4 2.8.8.9.4 1.5 1 2.1 1.7.5.7.8 1.7.8 2.9v10.5c0 .9.1 1.8.2 2.6s.4 1.5.7 1.9h-5.6c-.2-.2-.3-.6-.4-.9-.1-.3-.1-.7-.1-1-.9.9-1.9 1.5-3.1 1.9-1.2.4-2.4.5-3.6.5-1 0-1.8-.1-2.7-.4-.8-.2-1.5-.6-2.2-1.1-.6-.5-1.1-1.1-1.5-1.9-.3-.8-.5-1.6-.5-2.7s.2-2.1.6-2.8c.4-.7.9-1.3 1.5-1.8.6-.4 1.4-.8 2.2-1 .8-.2 1.6-.4 2.5-.5l2.4-.3c.8-.1 1.5-.2 2.1-.3.6-.2 1.1-.4 1.5-.7.4-.3.5-.7.5-1.3 0-.6-.1-1.1-.3-1.4-.2-.3-.5-.6-.8-.8-.3-.2-.7-.3-1.1-.4-.4-.1-.9-.1-1.4-.1-1.1 0-1.9.2-2.5.7-.6.5-1 1.3-1.1 2.3h-5.5c0-1.2.4-2.3.9-3.1zm10.9 7.8c-.3.1-.7.2-1.1.3-.4.1-.8.1-1.3.2-.4.1-.9.1-1.3.2l-1.2.3c-.4.1-.8.3-1 .5-.3.2-.5.5-.7.8-.3.4-.3.8-.3 1.3s.1.9.3 1.2c.2.3.4.6.7.8.3.2.7.3 1.1.4.4.1.8.1 1.3.1 1.1 0 1.9-.2 2.5-.5.6-.4 1-.8 1.3-1.3.3-.5.5-1 .5-1.5.1-.5.1-.9.1-1.2v-2.1c-.3.2-.6.4-.9.5zM95.6 7.6v2.8h.1c.7-1.2 1.6-2 2.7-2.5s2.3-.8 3.4-.8c1.5 0 2.7.2 3.6.6 1 .4 1.7 1 2.2 1.7.5.7.9 1.6 1.2 2.6.2 1 .3 2.1.3 3.4v12.3h-5.5V16.4c0-1.7-.3-2.9-.8-3.7-.5-.8-1.4-1.3-2.8-1.3-1.5 0-2.6.6-3.3 1.5-.7.9-1 2.4-1 4.4v10.5h-5.5V7.6h5.4zm25.8 3.6c-.9 0-1.6.2-2.2.6-.6.4-1.1.9-1.5 1.6-.4.6-.6 1.3-.8 2.1-.2.8-.2 1.5-.2 2.3 0 .7.1 1.5.2 2.2.2.8.4 1.4.8 2 .4.6.8 1.1 1.4 1.5.6.4 1.3.6 2.2.6 1.3 0 2.3-.4 3.1-1.1.7-.7 1.2-1.7 1.3-3h5.3c-.4 2.7-1.4 4.7-3.1 6.1-1.7 1.4-3.9 2.1-6.6 2.1-1.5 0-2.9-.3-4.1-.8-1.3-.5-2.3-1.2-3.2-2.1-.9-.9-1.6-2-2.1-3.2-.5-1.3-.7-2.6-.7-4.1 0-1.6.2-3 .7-4.3.5-1.3 1.1-2.5 2-3.5.9-1 2-1.7 3.2-2.3 1.3-.5 2.7-.8 4.3-.8 1.2 0 2.3.2 3.4.5s2.1.8 2.9 1.4c.9.6 1.6 1.4 2.1 2.4.5.9.8 2.1.9 3.4h-5.4c-.2-2.4-1.5-3.6-3.9-3.6zm-92-9.3h11.2v2.7H29.4zm109.9 21c.8.8 2.1 1.2 3.6 1.2 1.1 0 2.1-.3 2.9-.8.8-.6 1.3-1.2 1.5-1.8h4.8c-.8 2.4-2 4.1-3.6 5.2-1.6 1-3.5 1.6-5.8 1.6-1.6 0-3-.3-4.3-.8-1.3-.5-2.3-1.2-3.2-2.2-.9-.9-1.6-2-2-3.3-.5-1.3-.7-2.7-.7-4.3 0-1.5.2-2.9.7-4.2.5-1.3 1.2-2.4 2.1-3.4.9-.9 2-1.7 3.2-2.2 1.3-.5 2.7-.8 4.2-.8 1.7 0 3.2.3 4.4 1 1.3.7 2.3 1.5 3.1 2.7.8 1.1 1.4 2.4 1.8 3.8.4 1.4.5 2.9.4 4.5h-14.5c0 1.5.6 3 1.4 3.8zm6.4-10.5c-.7-.7-1.8-1.1-3.1-1.1-.9 0-1.6.2-2.2.5-.6.3-1.1.7-1.4 1.1-.3.4-.6.9-.7 1.4-.1.5-.2.9-.2 1.3h9c-.3-1.5-.8-2.5-1.4-3.2z"
+                            fill="#191919"></path><!--]-->
+                    </g>
+                </svg>
+            </a>
+            <ul class="nav nav-underline">
+                <a class="nav-link text-dark" href="#">Explore</a>
+                <a class="nav-link text-dark" href="#">Find Jobs</a>
+
+            </ul>
+
+
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mb-2 mb-lg-0">
+                    <li class="nav-item dropdown">
+                        <!-- clicking this link goes to fire.html; CSS will show dropdown on hover for desktop -->
+                        <a class="nav-link text-dark" href="#hire-freelancers">Hire Freelancers</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-dark" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Career Resources
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="free-wrap d-flex gap-3">
+                <a href="start.html" class="btn text-light"
+                    style="outline: none; box-sizing: border-box;background-color:rgba(0, 87, 255); border-radius:20px; border:1px solid transparent;">Start
+                    Free Trial</a>
+                <a href="sign.html" class="btn text-dark"
+                    style="outline: none; box-sizing: border-box;background-color:rgba(245, 248, 255); border-radius:20px; padding-left:20px; text-align:center">Sign
+                    in</a>
+                <svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 60 15.619"
+                    aria-labelledby="IconBase-title-v-0-0-0-0-0-0-4-11-0-0 IconBase-description-v-0-0-0-0-0-0-4-11-0-0"
+                    role="graphics-symbol img" width="65" height="30.619" class="PrimaryNav-mobileTriggerAdobeLogo-MF2"
+                    alt="Adobe Logo" data-iid="v-0-0-0-0-0-0-4-11-0-0">
+                    <title id="IconBase-title-v-0-0-0-0-0-0-4-11-0-0">Adobe, Inc.</title>
+                    <desc id="IconBase-description-v-0-0-0-0-0-0-4-11-0-0"></desc>
+                    <g><!--[-->
+                        <path
+                            d="M179.682,34.616l-.647,2a.145.145,0,0,1-.148.107h-1.564c-.094,0-.122-.053-.107-.132l2.7-7.78a2.513,2.513,0,0,0,.132-.823.089.089,0,0,1,.081-.094h2.157c.067,0,.094.013.108.081l3.06,8.629c.026.067.013.12-.067.12h-1.75a.132.132,0,0,1-.149-.094l-.688-2.009ZM182.3,32.93c-.264-.89-.808-2.522-1.058-3.479h-.013c-.216.9-.7,2.38-1.058,3.479Z"
+                            transform="translate(-153.778 -24.202)"></path>
+                        <path
+                            d="M241.14,28.636a3.573,3.573,0,0,1,3.91-3.541c.107,0,.242.015.444.028V22.46a.085.085,0,0,1,.094-.094h1.7c.067,0,.081.026.081.081v7.969a7.51,7.51,0,0,0,.054.984c0,.067-.013.094-.094.122a6.793,6.793,0,0,1-2.657.538A3.226,3.226,0,0,1,241.14,28.636Zm4.355-1.915a1.389,1.389,0,0,0-.5-.067,1.8,1.8,0,0,0-1.928,1.887,1.687,1.687,0,0,0,1.793,1.915,1.9,1.9,0,0,0,.633-.081Z"
+                            transform="translate(-209.252 -19.408)"></path>
+                        <path
+                            d="M303.016,46.411a3.328,3.328,0,1,1-6.646.041,3.3,3.3,0,0,1,3.356-3.492A3.212,3.212,0,0,1,303.016,46.411Zm-4.746.015c0,1.19.553,1.941,1.455,1.941.783,0,1.375-.674,1.375-1.915,0-1.058-.431-1.928-1.455-1.928C298.864,44.524,298.27,45.225,298.27,46.426Z"
+                            transform="translate(-257.179 -37.279)"></path>
+                        <path
+                            d="M356.658,22.37c.108,0,.132.013.132.108v2.764a4.3,4.3,0,0,1,1.135-.144,3.086,3.086,0,0,1,3.236,3.209,3.743,3.743,0,0,1-4.044,3.761A7.063,7.063,0,0,1,355,31.759a.156.156,0,0,1-.081-.132V22.464c0-.067.026-.094.094-.094Zm.926,4.314a2.71,2.71,0,0,0-.793.108v3.654a2.064,2.064,0,0,0,.5.054,1.856,1.856,0,0,0,1.954-2.023,1.58,1.58,0,0,0-1.656-1.792Z"
+                            transform="translate(-307.986 -19.412)"></path>
+                        <path
+                            d="M409.443,46.941c.067.768.607,1.4,1.928,1.4a4.176,4.176,0,0,0,1.658-.309c.041-.028.081-.013.081.067v1.28c0,.1-.026.132-.094.163a4.53,4.53,0,0,1-2.063.4,3.161,3.161,0,0,1-3.424-3.41,3.286,3.286,0,0,1,3.262-3.56,2.748,2.748,0,0,1,2.844,2.909,4.281,4.281,0,0,1-.067.9.114.114,0,0,1-.107.107,12.3,12.3,0,0,1-1.39.054Zm1.753-1.308a4.486,4.486,0,0,0,.674-.026v-.1a1.1,1.1,0,0,0-1.147-1.058,1.278,1.278,0,0,0-1.295,1.19Z"
+                            transform="translate(-353.639 -37.288)"></path>
+                        <path d="M84.13,0h6.523V15.619Z" transform="translate(-73.005)"></path>
+                        <path d="M6.529,0H0V15.619Z"></path>
+                        <path d="M48.032,43.53l4.156,9.862H49.465l-1.243-3.141H45.18Z"
+                            transform="translate(-39.205 -37.774)"></path><!--]-->
+                    </g>
+                </svg>
+            </div>
+        </div>
+    </nav>
+    <div class="first-section">
+        <div class="behance-grid left-grid">
+            <img src="https://img.freepik.com/free-photo/cute-animals-group-white-background_23-2150038555.jpg?semt=ais_hybrid&w=740&q=80https://img.freepik.com/free-photo/cute-animals-group-white-background_23-2150038555.jpg?semt=ais_hybrid&w=740&q=80"
+                alt="">
+            <img src="https://imgs.search.brave.com/eS-JDlDoWCFI18hjXVM-SlxJjWC3ukNtlWbJwvkfj9w/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NzFtckJtYXhzbEwu/anBn"
+                alt="">
+            <img src="https://imgs.search.brave.com/Iq-yg7XkbJnqsGynBh71PAhlfsF5n_cLaewIOWRX3S8/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9pLmlj/YW52YXMuY29tL2lj/My9ob3Jpem9udGFs/LWltYWdlL0FEVDEz/OTYuanBnP2ZpdD1j/cm9wJndpZHRoPTQz/NSZoZWlnaHQ9MzAw"
+                alt="">
+            <img src="https://imgs.search.brave.com/3ln6bdYFarVjxBxPf88gmTAZrw83eisd3DfIyQXnIjY/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9hcnR3/b3JrLndhbGxhcnRw/cmludHMuY29tL21l/ZGlhL3d5c2l3eWcv/aG9tZXBhZ2UvYmFu/bmVyL0FsbC9zdG9y/ZXdpZGUvMjAyNS93/YWxsLWFydC1wcmlu/dHMtY2FudmFzLXBy/aW50cy1zYWxlLWZp/bmFsLmpwZw"
+                alt="">
+            <img src="https://imgs.search.brave.com/4qVAA-z1NwguO3R5EsLqPr-5UWhf3A3zSw9XDNRYkco/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTQ4/Mzc3MzY4MC9waG90/by9haS1yb2JvdC1w/YWludGluZy1pbi10/aGUtYXJ0LXN0dWRp/by5qcGc_cz02MTJ4/NjEyJnc9MCZrPTIw/JmM9NW5TR3lWekw5/Qkg2RFBEdUhMcVNp/bnlUQkxsVmpEWXBS/ZkpuelY0LUU1RT0"
+                alt="">
+        </div>
+        <div style="justify-content: center;" class="text-center">
+            <h1 class="fw-semibold refre">The World’s <br><span style="color: rgb(0, 87, 255);">Best
+                    Creators</span><br><span>Are On Behance</span></h1>
+            <p class="my-5 daniel">A comprehensive platform to help hirers and creators <br>navigate the creative world
+                from discovering inspiration, <br> to connecting with one another</p>
+            <div class="demola">
+                <a href="behance.html" class="btn text-light"
+                    style="outline: none; box-sizing: border-box;background-color:rgba(0, 87, 255); border-radius:20px; border:1px solid transparent; width:170px">Hire
+                    a Freelancer
+                </a>
+                <a href="behance.html" class="btn text-primary"
+                    style="outline: none; box-sizing: border-box;--background-color:rgba(245, 248, 255) ; border-radius:20px; border:1px solid blue; width:170px;">Try
+                    Behance Pro</a>
+            </div>
+        </div>
+        <div class="behance-grid right-grid">
+            <img src="https://imgs.search.brave.com/I12A9CM6pj1VYGeYFCIVIFKhG9J9wpGuI8CQP5r68O0/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTY4/MzQwMDgzL3Bob3Rv/L2Nob29zZW15cGxh/dGUtaGVhbHRoeS1m/b29kLWFuZC1wbGF0/ZS1vZi11c2RhLWJh/bGFuY2VkLWRpZXQt/cmVjb21tZW5kYXRp/b24uanBnP3M9NjEy/eDYxMiZ3PTAmaz0y/MCZjPVM1T1l1UGct/bjFmdU9PZ1JlUWY5/eFB1RmdBMWktVU81/NFVqMnUxUkQ3aVU9"
+                alt="">
+            <img src="https://media.istockphoto.com/id/1256476993/photo/food.jpg?s=612x612&w=0&k=20&c=M--GL30a9tkEDQJVH0UI07Ve-QgFM2x5JUz4Twv99Lg="
+                alt="">
+            <img src="https://imgs.search.brave.com/Z1Kj3qCx12qR8dWH6zNJzR4aUtp0YmnvzMWdFS_CcYc/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9mcmVl/bmF0dXJlc3RvY2su/Y29tL3dwLWNvbnRl/bnQvdXBsb2Fkcy9m/cmVlbmF0dXJlc3Rv/Y2stMjMyMy03Njh4/NTEyLmpwZw"
+                alt="">
+            <img src="https://imgs.search.brave.com/5dfXF5pCSFzvNibBNAv2GqP0T0FNowOHEth3M2Y2h6A/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly90aHVt/YnMuZHJlYW1zdGlt/ZS5jb20vYi9zcHJp/bmctc3VtbWVyLW5h/dHVyZS1iYWNrZ3Jv/dW5kLWJsb29taW5n/LXdoaXRlLWZsb3dl/cnMtZmx5LWJ1dHRl/cmZseS1hZ2FpbnN0/LXN1bnJpc2Utc3Vu/bGlnaHQtMTQ0Mjg5/NzQwLmpwZw"
+                alt="">
+            <img src="https://imgs.search.brave.com/5dfXF5pCSFzvNibBNAv2GqP0T0FNowOHEth3M2Y2h6A/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly90aHVt/YnMuZHJlYW1zdGlt/ZS5jb20vYi9zcHJp/bmctc3VtbWVyLW5h/dHVyZS1iYWNrZ3Jv/dW5kLWJsb29taW5n/LXdoaXRlLWZsb3dl/cnMtZmx5LWJ1dHRl/cmZseS1hZ2FpbnN0/LXN1bnJpc2Utc3Vu/bGlnaHQtMTQ0Mjg5/NzQwLmpwZw"
+                alt="">
+
+
+        </div>
+    </div>
+    <section class="second-section search-filter-section py-2 bg-white border-top" style="margin-top: 150px;">
+        <div class="container-fluid">
+            <div class="row align-items-center gx-2">
+                <!-- Filter button -->
+                <div class="col-auto">
+                    <button
+                        class="btn btn-outline-secondary d-flex align-items-center gap-2 rounded-pill reddington px-3 py-2"
+                        type="button" aria-label="Filter">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                            <path d="M2 3h12M5 8h6M7 13h2" stroke="currentColor" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                        <span class="d-none d-sm-inline">Filter</span>
+                    </button>
+                </div>
+
+                <!-- Search (fluid) -->
+                <div class="col">
+                    <form class="w-100" role="search" aria-label="Search Behance">
+                        <div class="input-group search-input-group">
+                            <span class="input-group-text bg-white border-end-0 search-icon" id="search-addon">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                    <path d="M21 21l-4.35-4.35" stroke="currentColor" stroke-width="1.6"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                    <circle cx="11" cy="11" r="6" stroke="currentColor" stroke-width="1.6" />
+                                </svg>
+                            </span>
+                            <input type="search" class="form-control rounded-pill reddington border-start-0"
+                                placeholder="Search Behance..." aria-label="Search input"
+                                aria-describedby="search-addon">
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Scope tabs + sort (right) -->
+                <div class="col-auto">
+                    <div class="d-flex align-items-center gap-3">
+                        <!-- Tabs visible md+ -->
+                        <nav class="d-none d-md-flex nav nav-pills align-items-center" role="tablist"
+                            aria-label="Search scopes">
+                            <a class="nav-link text-dark" href="#">Projects</a>
+                            <a class="nav-link text-dark" href="#">People</a>
+                            <a class="nav-link text-dark" href="#">Assets</a>
+                            <a class="nav-link text-dark" href="#">Images</a>
+                        </nav>
+
+                        <!-- Small-screen dropdown for tabs -->
+                        <div class="d-md-none">
+                            <div class="dropdown">
+                                <button class="btn btn-outline-secondary rounded-pill reddington dropdown-toggle"
+                                    type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Scope
+                                </button>
+                                <ul class="dropdown-menu dropdown-menu-end">
+                                    <li><a class="dropdown-item" href="#">Projects</a></li>
+                                    <li><a class="dropdown-item" href="#">People</a></li>
+                                    <li><a class="dropdown-item" href="#">Assets</a></li>
+                                    <li><a class="dropdown-item" href="#">Images</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Recommended / sort (always visible) -->
+                        <div class="dropdown">
+                            <button class="btn btn-link text-dark dropdown-toggle px-2" type="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Recommended
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                                <li><a class="dropdown-item" href="#">Recommended</a></li>
+                                <li><a class="dropdown-item" href="#">Most Recent</a></li>
+                                <li><a class="dropdown-item" href="#">Most Appreciated</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Category carousel (Bootstrap carousel — no custom JS required) -->
+    <section class="category-carousel py-2">
+        <div class="container">
+            <div id="categoryCarousel" class="carousel slide" data-bs-ride="false" data-bs-interval="false">
+                <div class="carousel-inner">
+                    <!-- Slide 1 -->
+                    <div class="carousel-item active">
+                        <div class="d-flex flex-nowrap gap-3 px-2">
+                            <div class="category-pill reddington">For You</div>
+                            <div class="category-pill reddington">Following</div>
+                            <div class="category-pill reddington">Best of Behance</div>
+                            <div class="category-pill reddington">Graphic Design</div>
+                            <div class="category-pill reddington">Photography</div>
+                            <div class="category-pill reddington">Illustration</div>
+                            <div class="category-pill reddington">For You</div>
+                            <div class="category-pill reddington">Following</div>
+                            <div class="category-pill reddington">Best of Behance</div>
+                            <div class="category-pill reddington">Graphic Design</div>
+                            <div class="category-pill reddington">Photography</div>
+                            <div class="category-pill reddington">Illustration</div>
+                            <div class="category-pill reddington">For You</div>
+                            <div class="category-pill reddington">Following</div>
+                            <div class="category-pill reddington">Best of Behance</div>
+                            <div class="category-pill reddington">Graphic Design</div>
+                            <div class="category-pill reddington">Photography</div>
+                            <div class="category-pill reddington">Illustration</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="projects-section py-4">
+        <div class="container-fluid">
+            <h3 class="mb-3 fw-semibold">Projects</h3>
+
+            <div class="projects-grid" aria-live="polite">
+                <!-- 25 sample cards (replace src, title, author and icons as needed) -->
+                <!-- Repeat / copy this block to add/edit items -->
+                <article class="project-card">
+                    <figure class="card-media">
+                        <img src="https://mir-s3-cdn-cf.behance.net/projects/max_808/2167dc204353165.Y3JvcCwxOTk5LDE1NjQsMCwxNTM.jpg"
+                            alt="Project 1 image" loading="lazy">
+                        <div class="card-overlay">
+                            <button class="save-btn" type="button" aria-label="Save project">Save</button>
+                        </div>
+                    </figure>
+
+                    <div class="card-meta">
+                        <h6 class="project-title mb-1">Project title 1</h6>
+                        <div class="project-sub text-muted small">Author Name</div>
+                        <div class="project-stats mt-2">
+                            <span class="stat"><svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"
+                                    class="me-1">
+                                    <path
+                                        d="M8 15s6-4.35 6-8.5A4.5 4.5 0 0 0 9.5 2 6.6 6.6 0 0 0 8 3.1 6.6 6.6 0 0 0 6.5 2 4.5 4.5 0 0 0 2 6.5C2 10.65 8 15 8 15z" />
+                                </svg>69</span>
+                            <span class="stat ms-3"><svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"
+                                    class="me-1">
+                                    <path d="M8 3a5 5 0 1 0 0 10A5 5 0 0 0 8 3z" />
+                                </svg>150</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Duplicate the article above 25 times; below are example placeholders -->
+                <article class="project-card">
+                    <figure class="card-media"><img src="https://picsum.photos/seed/p2/800/600" alt="" loading="lazy">
+                        <div class="card-overlay"><button class="save-btn" type="button">Save</button></div>
+                    </figure>
+                    <div class="card-meta">
+                        <h6 class="project-title mb-1">Project title 2</h6>
+                        <div class="project-sub text-muted small">Author B</div>
+                        <div class="project-stats mt-2"><span class="stat">188</span><span class="stat ms-3">1.6K</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <figure class="card-media"><img src="https://picsum.photos/seed/p3/800/600" alt="" loading="lazy">
+                        <div class="card-overlay"><button class="save-btn" type="button">Save</button></div>
+                    </figure>
+                    <div class="card-meta">
+                        <h6 class="project-title mb-1">Project title 3</h6>
+                        <div class="project-sub text-muted small">Author C</div>
+                        <div class="project-stats mt-2"><span class="stat">252</span><span class="stat ms-3">1.3K</span>
+                        </div>
+                    </div>
+
+                </article>
+                <article class="project-card">
+                    <figure class="card-media"><img src="https://picsum.photos/seed/p3/800/600" alt="" loading="lazy">
+                        <div class="card-overlay"><button class="save-btn" type="button">Save</button></div>
+                    </figure>
+                    <div class="card-meta">
+                        <h6 class="project-title mb-1">Project title 3</h6>
+                        <div class="project-sub text-muted small">Author C</div>
+                        <div class="project-stats mt-2"><span class="stat">252</span><span class="stat ms-3">1.3K</span>
+                        </div>
+                    </div>
+
+                </article>
+                <article class="project-card">
+                    <figure class="card-media"><img src="https://picsum.photos/seed/p3/800/600" alt="" loading="lazy">
+                        <div class="card-overlay"><button class="save-btn" type="button">Save</button></div>
+                    </figure>
+                    <div class="card-meta">
+                        <h6 class="project-title mb-1">Project title 3</h6>
+                        <div class="project-sub text-muted small">Author C</div>
+                        <div class="project-stats mt-2"><span class="stat">252</span><span class="stat ms-3">1.3K</span>
+                        </div>
+                    </div>
+
+                </article>
+                <article class="project-card">
+                    <figure class="card-media"><img src="https://picsum.photos/seed/p3/800/600" alt="" loading="lazy">
+                        <div class="card-overlay"><button class="save-btn" type="button">Save</button></div>
+                    </figure>
+                    <div class="card-meta">
+                        <h6 class="project-title mb-1">Project title 3</h6>
+                        <div class="project-sub text-muted small">Author C</div>
+                        <div class="project-stats mt-2"><span class="stat">252</span><span class="stat ms-3">1.3K</span>
+                        </div>
+                    </div>
+
+                </article>
+                <article class="project-card">
+                    <figure class="card-media"><img src="https://picsum.photos/seed/p3/800/600" alt="" loading="lazy">
+                        <div class="card-overlay"><button class="save-btn" type="button">Save</button></div>
+                    </figure>
+                    <div class="card-meta">
+                        <h6 class="project-title mb-1">Project title 3</h6>
+                        <div class="project-sub text-muted small">Author C</div>
+                        <div class="project-stats mt-2"><span class="stat">252</span><span class="stat ms-3">1.3K</span>
+                        </div>
+                    </div>
+
+                </article>
+                <article class="project-card">
+                    <figure class="card-media"><img src="https://picsum.photos/seed/p3/800/600" alt="" loading="lazy">
+                        <div class="card-overlay"><button class="save-btn" type="button">Save</button></div>
+                    </figure>
+                    <div class="card-meta">
+                        <h6 class="project-title mb-1">Project title 3</h6>
+                        <div class="project-sub text-muted small">Author C</div>
+                        <div class="project-stats mt-2"><span class="stat">252</span><span class="stat ms-3">1.3K</span>
+                        </div>
+                    </div>
+
+                </article>
+                <article class="project-card">
+                    <figure class="card-media"><img src="https://picsum.photos/seed/p3/800/600" alt="" loading="lazy">
+                        <div class="card-overlay"><button class="save-btn" type="button">Save</button></div>
+                    </figure>
+                    <div class="card-meta">
+                        <h6 class="project-title mb-1">Project title 3</h6>
+                        <div class="project-sub text-muted small">Author C</div>
+                        <div class="project-stats mt-2"><span class="stat">252</span><span class="stat ms-3">1.3K</span>
+                        </div>
+                    </div>
+
+                </article>
+                <article class="project-card">
+                    <figure class="card-media"><img src="https://picsum.photos/seed/p3/800/600" alt="" loading="lazy">
+                        <div class="card-overlay"><button class="save-btn" type="button">Save</button></div>
+                    </figure>
+                    <div class="card-meta">
+                        <h6 class="project-title mb-1">Project title 3</h6>
+                        <div class="project-sub text-muted small">Author C</div>
+                        <div class="project-stats mt-2"><span class="stat">252</span><span class="stat ms-3">1.3K</span>
+                        </div>
+                    </div>
+
+                </article>
+                <article class="project-card">
+                    <figure class="card-media"><img src="https://picsum.photos/seed/p3/800/600" alt="" loading="lazy">
+                        <div class="card-overlay"><button class="save-btn" type="button">Save</button></div>
+                    </figure>
+                    <div class="card-meta">
+                        <h6 class="project-title mb-1">Project title 3</h6>
+                        <div class="project-sub text-muted small">Author C</div>
+                        <div class="project-stats mt-2"><span class="stat">252</span><span class="stat ms-3">1.3K</span>
+                        </div>
+                    </div>
+
+                </article>
+                <article class="project-card">
+                    <figure class="card-media"><img src="https://picsum.photos/seed/p3/800/600" alt="" loading="lazy">
+                        <div class="card-overlay"><button class="save-btn" type="button">Save</button></div>
+                    </figure>
+                    <div class="card-meta">
+                        <h6 class="project-title mb-1">Project title 3</h6>
+                        <div class="project-sub text-muted small">Author C</div>
+                        <div class="project-stats mt-2"><span class="stat">252</span><span class="stat ms-3">1.3K</span>
+                        </div>
+                    </div>
+
+                </article>
+                <article class="project-card">
+                    <figure class="card-media"><img src="https://picsum.photos/seed/p3/800/600" alt="" loading="lazy">
+                        <div class="card-overlay"><button class="save-btn" type="button">Save</button></div>
+                    </figure>
+                    <div class="card-meta">
+                        <h6 class="project-title mb-1">Project title 3</h6>
+                        <div class="project-sub text-muted small">Author C</div>
+                        <div class="project-stats mt-2"><span class="stat">252</span><span class="stat ms-3">1.3K</span>
+                        </div>
+                    </div>
+
+                </article>
+                <article class="project-card">
+                    <figure class="card-media"><img src="https://picsum.photos/seed/p3/800/600" alt="" loading="lazy">
+                        <div class="card-overlay"><button class="save-btn" type="button">Save</button></div>
+                    </figure>
+                    <div class="card-meta">
+                        <h6 class="project-title mb-1">Project title 3</h6>
+                        <div class="project-sub text-muted small">Author C</div>
+                        <div class="project-stats mt-2"><span class="stat">252</span><span class="stat ms-3">1.3K</span>
+                        </div>
+                    </div>
+
+                </article>
+                <article class="project-card">
+                    <figure class="card-media"><img src="https://picsum.photos/seed/p3/800/600" alt="" loading="lazy">
+                        <div class="card-overlay"><button class="save-btn" type="button">Save</button></div>
+                    </figure>
+                    <div class="card-meta">
+                        <h6 class="project-title mb-1">Project title 3</h6>
+                        <div class="project-sub text-muted small">Author C</div>
+                        <div class="project-stats mt-2"><span class="stat">252</span><span class="stat ms-3">1.3K</span>
+                        </div>
+                    </div>
+
+                </article>
+                <article class="project-card">
+                    <figure class="card-media"><img src="https://picsum.photos/seed/p3/800/600" alt="" loading="lazy">
+                        <div class="card-overlay"><button class="save-btn" type="button">Save</button></div>
+                    </figure>
+                    <div class="card-meta">
+                        <h6 class="project-title mb-1">Project title 3</h6>
+                        <div class="project-sub text-muted small">Author C</div>
+                        <div class="project-stats mt-2"><span class="stat">252</span><span class="stat ms-3">1.3K</span>
+                        </div>
+                    </div>
+
+                </article>
+                <article class="project-card">
+                    <figure class="card-media"><img src="https://picsum.photos/seed/p3/800/600" alt="" loading="lazy">
+                        <div class="card-overlay"><button class="save-btn" type="button">Save</button></div>
+                    </figure>
+                    <div class="card-meta">
+                        <h6 class="project-title mb-1">Project title 3</h6>
+                        <div class="project-sub text-muted small">Author C</div>
+                        <div class="project-stats mt-2"><span class="stat">252</span><span class="stat ms-3">1.3K</span>
+                        </div>
+                    </div>
+
+                </article>
+                <article class="project-card">
+                    <figure class="card-media"><img src="https://picsum.photos/seed/p3/800/600" alt="" loading="lazy">
+                        <div class="card-overlay"><button class="save-btn" type="button">Save</button></div>
+                    </figure>
+                    <div class="card-meta">
+                        <h6 class="project-title mb-1">Project title 3</h6>
+                        <div class="project-sub text-muted small">Author C</div>
+                        <div class="project-stats mt-2"><span class="stat">252</span><span class="stat ms-3">1.3K</span>
+                        </div>
+                    </div>
+
+                </article>
+                <article class="project-card">
+                    <figure class="card-media"><img src="https://picsum.photos/seed/p3/800/600" alt="" loading="lazy">
+                        <div class="card-overlay"><button class="save-btn" type="button">Save</button></div>
+                    </figure>
+                    <div class="card-meta">
+                        <h6 class="project-title mb-1">Project title 3</h6>
+                        <div class="project-sub text-muted small">Author C</div>
+                        <div class="project-stats mt-2"><span class="stat">252</span><span class="stat ms-3">1.3K</span>
+                        </div>
+                    </div>
+
+                </article>
+                <article class="project-card">
+                    <figure class="card-media"><img src="https://picsum.photos/seed/p3/800/600" alt="" loading="lazy">
+                        <div class="card-overlay"><button class="save-btn" type="button">Save</button></div>
+                    </figure>
+                    <div class="card-meta">
+                        <h6 class="project-title mb-1">Project title 3</h6>
+                        <div class="project-sub text-muted small">Author C</div>
+                        <div class="project-stats mt-2"><span class="stat">252</span><span class="stat ms-3">1.3K</span>
+                        </div>
+                    </div>
+
+                </article>
+                <article class="project-card">
+                    <figure class="card-media"><img src="https://picsum.photos/seed/p3/800/600" alt="" loading="lazy">
+                        <div class="card-overlay"><button class="save-btn" type="button">Save</button></div>
+                    </figure>
+                    <div class="card-meta">
+                        <h6 class="project-title mb-1">Project title 3</h6>
+                        <div class="project-sub text-muted small">Author C</div>
+                        <div class="project-stats mt-2"><span class="stat">252</span><span class="stat ms-3">1.3K</span>
+                        </div>
+                    </div>
+
+                </article>
+                <article class="project-card">
+                    <figure class="card-media"><img src="https://picsum.photos/seed/p3/800/600" alt="" loading="lazy">
+                        <div class="card-overlay"><button class="save-btn" type="button">Save</button></div>
+                    </figure>
+                    <div class="card-meta">
+                        <h6 class="project-title mb-1">Project title 3</h6>
+                        <div class="project-sub text-muted small">Author C</div>
+                        <div class="project-stats mt-2"><span class="stat">252</span><span class="stat ms-3">1.3K</span>
+                        </div>
+                    </div>
+
+                </article>
+                <article class="project-card">
+                    <figure class="card-media"><img src="https://picsum.photos/seed/p3/800/600" alt="" loading="lazy">
+                        <div class="card-overlay"><button class="save-btn" type="button">Save</button></div>
+                    </figure>
+                    <div class="card-meta">
+                        <h6 class="project-title mb-1">Project title 3</h6>
+                        <div class="project-sub text-muted small">Author C</div>
+                        <div class="project-stats mt-2"><span class="stat">252</span><span class="stat ms-3">1.3K</span>
+                        </div>
+                    </div>
+
+                </article>
+                <article class="project-card">
+                    <figure class="card-media"><img src="https://picsum.photos/seed/p3/800/600" alt="" loading="lazy">
+                        <div class="card-overlay"><button class="save-btn" type="button">Save</button></div>
+                    </figure>
+                    <div class="card-meta">
+                        <h6 class="project-title mb-1">Project title 3</h6>
+                        <div class="project-sub text-muted small">Author C</div>
+                        <div class="project-stats mt-2"><span class="stat">252</span><span class="stat ms-3">1.3K</span>
+                        </div>
+                    </div>
+
+                    <!--  -->
+
+
+
+
+
+            </div>
+        </div>
+
+        <!-- Page end marker: append new content below this div so it starts at the end of the document -->
+        <div id="page-end" aria-hidden="true"></div>
+
+        <div class="signin-container">
+            <h1>Sign in to search the world's largest creative network</h1>
+
+            <button class="btn-signin btn-google">
+                Continue with Google
+            </button>
+
+            <button class="btn-signin btn-facebook">
+                Continue with Facebook
+            </button>
+
+            <button class="btn-signin btn-apple">
+                Continue with Apple
+            </button>
+
+            <div class="view-more">
+                View more
+            </div>
+
+            <div class="or-divider">
+                <span>Or</span>
+            </div>
+            <p class="fs-5 fw-bold">Continue with email</p>
+            <textarea name="" id="" cols="40rem" rows="2" class="border border-dark"></textarea>
+            <button class="hi mt-5 text-end align-right">Continue</button>
+
+            <!-- Additional content would go here -->
+        </div>
+
+        <div class="upgrade-banner">
+            <p class="upgrade-text">
+                <span class="highlight ms-5 text-warning">Upgrade to Behance Pro today:</span>
+                <span class="text-info">Get advanced analytics, a custom portfolio
+                    <span class="text-success">website, and more features to grow your creative career.</span> </span>
+                <span class="underline-design text-primary">Start your 7 day
+                    free trial</span>
+            </p>
+        </div>
+
+        </div>
+
+
+        <footer class="behance-footer py-5 text-light">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-md-3 mb-4 mb-md-0">
+                        <h2 class="behance-logo-text mb-4">Behance</h2>
+                    </div>
+
+                    <div class="col-6 col-sm-3 col-md-2 mb-3 text-light">
+                        <h5 class="footer-heading">Built For Creatives</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="#" class="footer-link">Try Behance Pro</a></li>
+                            <li><a href="#" class="footer-link">Find Inspiration</a></li>
+                            <li><a href="#" class="footer-link">Get Hired</a></li>
+                            <li><a href="#" class="footer-link">Sell Creative Assets</a></li>
+                            <li><a href="#" class="footer-link">Sell Freelance Services</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-6 col-sm-3 col-md-2 mb-3">
+                        <h5 class="footer-heading">Find Talent</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="#" class="footer-link">Post a Job</a></li>
+                            <li><a href="#" class="footer-link">Graphic Designers</a></li>
+                            <li><a href="#" class="footer-link">Photographers</a></li>
+                            <li><a href="#" class="footer-link">Video Editors</a></li>
+                            <li><a href="#" class="footer-link">Web Designers</a></li>
+                            <li><a href="#" class="footer-link">Illustrators</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-6 col-sm-3 col-md-2 mb-3">
+                        <h5 class="footer-heading">Behance</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="#" class="footer-link">About Behance</a></li>
+                            <li><a href="#" class="footer-link">Adobe Portfolio</a></li>
+                            <li><a href="#" class="footer-link">Download the App</a></li>
+                            <li><a href="#" class="footer-link">Blog</a></li>
+                            <li><a href="#" class="footer-link">Careers</a></li>
+                            <li><a href="#" class="footer-link">Help Center</a></li>
+                            <li><a href="#" class="footer-link">Contact Us</a></li>
+                            <li><a href="#" class="footer-link">Login</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-6 col-sm-3 col-md-3 mb-3">
+                        <h5 class="footer-heading">Social</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="#" class="footer-link-social"><i class="fab fa-instagram me-2">
+                                        <img src="./icon/svgexport-63.svg" alt="" width="25rem">
+                                    </i>Instagram</a></li>
+                            <li><a href="#" class="footer-link-social"><i class="fab fa-twitter me-2">
+                                        <img src="./icon/svgexport-64.svg" alt="" width="25rem">
+                                    </i>Twitter</a></li>
+                            <li><a href="#" class="footer-link-social"><i class="fab fa-pinterest me-2">
+                                        <img src="./icon/svgexport-65.svg" alt="" width="25rem">
+                                    </i>Pinterest</a></li>
+                            <li><a href="#" class="footer-link-social"><i class="fab fa-facebook me-2">
+                                        <img src="./icon/svgexport-66.svg" alt="" width="25rem">
+                                    </i>Facebook</a></li>
+                            <li><a href="#" class="footer-link-social"><i class="fab fa-linkedin me-2">
+                                        <img src="./icon/svgexport-67.svg" alt="" width="25rem">
+                                    </i>LinkedIn</a></li>
+                        </ul>
+                    </div>
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
+    integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
+    crossorigin="anonymous"></script>
+
+</html>

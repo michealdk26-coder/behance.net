@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <defs>
+    <style>.dot{fill:none;stroke:#cfe6ff;stroke-width:2;stroke-dasharray:2 10;opacity:0.6}</style>
+  </defs>
+  <g transform="translate(200,200)">
+    <circle r="120" class="dot" />
+    <circle r="80" class="dot" />
+    <circle r="40" class="dot" />
+  </g>
+</svg>

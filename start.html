@@ -1,0 +1,947 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="start.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+  <style>
+    .dropdown:hover .dropdown-menu {
+      display: block;
+      background-color: white;
+      margin-top: 0;
+    }
+
+    .dropdown-item:hover {
+      background: none;
+      opacity: .8;
+      color: blue;
+    }
+
+    .accordion-item {
+      background-color: #404040 !important;
+    }
+
+    .accordion-button {
+      background-color: #404040 !important;
+    }
+
+    body {
+      background-color: #fff;
+      font-family: "Inter", Arial, sans-serif;
+      color: #212529;
+    }
+
+    .testimonial-card {
+      border: 1px solid #e5e7eb;
+      border-radius: 16px;
+      padding: 24px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .testimonial-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .testimonial-card p {
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    .testimonial-card strong {
+      font-weight: 600;
+    }
+
+    .author {
+      display: flex;
+      align-items: center;
+      margin-top: 20px;
+    }
+
+    .author img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+
+    .author-name {
+      font-weight: 600;
+      color: #0d6efd;
+    }
+
+    .heading {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    @media (max-width: 991px) {
+      .bcak {
+        width: 100% !important;
+        max-width: 100% !important;
+        overflow-x: hidden !important;
+      }
+
+      .fox,
+      .ogo,
+      .start,
+      .star,
+      .fuge {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+      }
+
+      .go img,
+      img {
+        max-width: 100% !important;
+        height: auto !important;
+      }
+
+      .ms-md-5 {
+        margin-left: 0 !important;
+      }
+
+ 
+      .bcak {
+        height: auto !important;
+        padding-bottom: 1.5rem !important;
+      }
+
+      .acc {
+        padding-top: 2rem !important;
+        font-size: 2rem !important;
+      }
+
+   
+      .for,
+      .get,
+      .why,
+      .foy,
+      .fit {
+        font-size: 1.25rem !important;
+        line-height: 1.4 !important;
+      }
+
+    
+      .container,
+      .fuy,
+      .expand,
+      .mik,
+      .dont,
+      .testimonial-card,
+      .feature-card {
+        padding-top: 1rem !important;
+        padding-bottom: 1rem !important;
+        margin-bottom: 1rem !important;
+      }
+
+   
+      .fox,
+      .ogo,
+      .start,
+      .star,
+      .fuge {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        display: inline-block !important;
+      }
+
+     
+      .bcak,
+      .container,
+      .fuy,
+      .expand,
+      .mik,
+      .dont,
+      .testimonial-card,
+      .feature-card,
+      .pricin-card,
+      .pricing-card,
+      .behance-footer,
+      .behance-footer-bottom {
+        background-color: #6c757d !important;
+
+        background-image: none !important;
+        color: #ffffff !important;
+     
+      }
+
+      .text-light {
+        color: #ffffff !important;
+      }
+
+     
+      .bcak a,
+      .container a,
+      .fuy a,
+      .expand a,
+      .mik a,
+      .dont a,
+      .testimonial-card a,
+      .feature-card a,
+      .pricin-card a,
+      .pricing-card a,
+      .behance-footer a,
+      .behance-footer-bottom a,
+      .bcak button,
+      .container button {
+        color: #ffffff !important;
+      }
+    }
+
+  
+    @media (min-width: 992px) {
+
+      .navbar {
+        padding-top: .15rem !important;
+        padding-bottom: .15rem !important;
+        min-height: 40px;
+      }
+
+      .navbar-brand img {
+        max-width: 36px !important;
+        max-height: 36px !important;
+      }
+
+      .navbar .nav-link {
+        padding-top: .15rem !important;
+        padding-bottom: .15rem !important;
+        line-height: 1 !important;
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+  <div class="bcak" style="max-width:1200px;margin:0 auto;">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary position-sticky top-0">
+      <div class="container-fluid px-3 px-md-0 ms-md-5">
+        <a class="navbar-brand" href="#"><img src="./images/Behance.svg" alt="" class="img-fluid"
+            style="max-width:40px;"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a id="explore" class="explore nav-link active fw-semi-bold" aria-current="page"
+                href="gg.html">Explore</a>
+            </li>
+            <li class="nav-item">
+              <a class=" explore nav-link active fw-semi-bold" href="#">Find jobs</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link active dropdown-toggle fw-semi-bold" href="fire.html" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                Hire freelancers
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item fw-bold" href="#">
+                    <img src="./icon/svgexport-27.svg" alt="">
+                    <span>my Freelance Projects</span>
+                  </a></li>
+                <li><a class="dropdown-item d-flex gap-2 fw-bold" href="#">
+                    <img src="./icon/svgexport-12.svg" alt="">
+                    <span>Find creatives</span>
+                  </a></li>
+                <li><a class="dropdown-item d-flex gap-2 fw-bold" href="#">
+                    <img src="./icon/svgexport-12.svg" alt="">
+                    <span>Hiring on Behance</span>
+                  </a></li>
+                <li><a class="dropdown-item d-flex gap-2 fw-bold" href="#">
+                    <img src="./icon/svgexport-12.svg" alt="">
+                    <span>New Freelance Projects</span>
+                  </a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="#">Logo Designers</a></li>
+                <li><a class="dropdown-item" href="#">Brand Designers</a></li>
+                <li><a class="dropdown-item" href="#">Website Designers</a></li>
+                <li><a class="dropdown-item" href="#">Illustrators</a></li>
+                <li><a class="dropdown-item" href="#">Social Media Designers</a></li>
+              </ul>
+            <li class="nav-item dropdown">
+              <a class=" nav-link active dropdown-toggle fw-semi-bold" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Career Resources
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item fw-bold" href="#">
+                    <span>Overview</span>
+                  </a></li>
+                <li><a class="dropdown-item d-flex gap-2 fw-bold" href="#">
+                    <span>Career Guides</span>
+                  </a></li>
+                <li><a class="dropdown-item d-flex gap-2 fw-bold" href="#">
+                    <span>Commisioned Projects</span>
+                  </a></li>
+                <li><a class="dropdown-item d-flex gap-2 fw-bold" href="#">
+                    <span>Creative Apprenticeship</span>
+                  </a></li>
+              </ul>
+            </li>
+          </ul>
+          <div class="free-wrap">
+            <button class="free"><a href="start.html">Start Free Trial</a></button>
+           
+          </div>
+          <button class="sign ms-md-5"><a href="#">Sign In</a></button>
+          <span class="cse ms-md-5"><img src="./icon/svgexport-11.svg" alt="" class="img-fluid" /></span>
+
+        </div>
+      </div>
+    </nav>
+    <div class="reach">
+      <p class="acc text-center text-light fw-bold">Accelerate Your Creative <br> Career with Behance Pro</p>
+
+      <p class="text-center text-light">Take your career further with tools designed to showcase your <br> creativity,
+        reach more people, and earn more—all in one place.</p>
+      <div class="d-flex ms-md-5 py-3 justify-content-center flex-wrap gap-2">
+        <button class="fox">Start Free Trial</button>
+        <button class="pla">Compare Plans</button>
+      </div>
+    </div>
+    <!-- end -->
+
+    <!-- <section class="features-section py-5"> -->
+    <div class="container my-5">
+      <div class="row justify-content-center g-4">
+        <p class="why">Why upgrade to pro</p>
+        <div class="col-lg-4 col-md-6">
+          <div class="p-4 rounded-3 feature-card feature-card-blue">
+            <div class="icon-wrapper">
+              <i class="fas fa-chart-line"></i>
+              <span class="d-flex align-items-center justify-content-center"><img src="./images/svgexport-13.svg"
+                  alt=""></span>
+            </div>
+            <h3 class="my-3"><strong>Expand Your Reach</strong></h3>
+            <p class="text-muted">Reach more clients and collaborators and get your work seen by the right people at
+              the right time.</p>
+            <a href="#" class="learn-more-link link-blue">
+              Learn More <i class="fas fa-chevron-down ms-1"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="p-4 rounded-3 feature-card feature-card-green">
+            <div class="icon-wrapper">
+              <img src="./images/svgexport-15.svg" alt="">
+              <i class="fas fa-sack-dollar"></i>
+            </div>
+            <h3 class="my-3"><strong>Grow Your Earnings</strong></h3>
+            <p class="text-muted">Get exclusive access to premium freelance jobs from top clients—with no platform
+              fees.</p>
+            <a href="#" class="learn-more-link link-green">
+              Learn More <i class="fas fa-chevron-down ms-1"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="p-4 rounded-3 feature-card feature-card-pink">
+            <div class="icon-wrapper">
+              <i class="fas fa-star-of-life"></i>
+              <img src="./images/svgexport-17.svg" alt="">
+            </div>
+            <h3 class="my-3"><strong>Stand Out from the Crowd</strong></h3>
+            <p class="text-muted">Showcase your unique brand with customizations that match who you are as a creative.
+            </p>
+            <a href="#" class="learn-more-link link-pink">
+              Learn More <i class="fas fa-chevron-down ms-1"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+    <div class="expand">
+      <div class="d-flex flex-column align-items-center justify-content-center">
+        <p class="hit"><img src="./images/svgexport-13.svg" alt=""></p>
+        <p class="text-primary fs-4 pt-3 fw-bold">Expand Your Reach</p>
+        <p class="for">Get your work seen by more clients</p>
+        <span class="for"> and collaborators</span>
+        <button class="ogo">Start Free Trial</button>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row align-items-center my-4">
+        <div class="col-12 col-md-6 mb-3 mb-md-0">
+          <img src="./images/imgi_22_pro_boost_projects_2x (1).webp" alt="Boost projects"
+            class="img-fluid mx-auto d-block">
+        </div>
+        <div class="col-12 col-md-6">
+          <div class="d-flex align-items-start gap-3">
+            <div class="moto">
+              <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor"
+                class="bi bi-play-circle-fill" viewBox="0 0 16 16">
+                <path
+                  d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M6.79 5.093A.5.5 0 0 0 6 5.5v5a.5.5 0 0 0 .79.407l3.5-2.5a.5.5 0 0 0 0-.814z" />
+              </svg>
+            </div>
+            <div>
+              <p class="center fw-bold">Boost your projects</p>
+              <p class="fs-5 fw-semi-bold">Highlight your best work and make sure it reaches the right eyes at the right
+                time.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row align-items-center my-4">
+        <div class="col-12 col-md-6 order-2 order-md-1">
+          <div class="d-flex align-items-start gap-3">
+            <div class="me-2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor"
+                class="bi bi-play-circle-fill" viewBox="0 0 16 16">
+                <path
+                  d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M6.79 5.093A.5.5 0 0 0 6 5.5v5a.5.5 0 0 0 .79.407l3.5-2.5a.5.5 0 0 0 0-.814z" />
+              </svg>
+            </div>
+            <div>
+              <p class="fs-4 center fw-bold">See who's viewed your profile and projects</p>
+              <p class="fs-5 fw-semi-bold">Get detailed insights on who's engaging with your work and how they found
+                you, so you can follow up with potential clients and collaborators.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 order-1 order-md-2 mb-3 mb-md-0">
+          <img src="./images/imgi_23_pro_traffic_sources_2x (1).webp" alt="Traffic sources"
+            class="img-fluid mx-auto d-block">
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row align-items-center my-4">
+        <div class="col-12 col-md-6 mb-3 mb-md-0">
+          <img src="./images/imgi_24_pro_scheduled_publish_2x (1).webp" alt="Scheduled publish"
+            class="img-fluid mx-auto d-block">
+        </div>
+        <div class="col-12 col-md-6">
+          <div class="d-flex align-items-start gap-3">
+            <div class="me-2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor"
+                class="bi bi-play-circle-fill" viewBox="0 0 16 16">
+                <path
+                  d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M6.79 5.093A.5.5 0 0 0 6 5.5v5a.5.5 0 0 0 .79.407l3.5-2.5a.5.5 0 0 0 0-.814z" />
+              </svg>
+            </div>
+            <div>
+              <p class="center fw-bold">Get noticed</p>
+              <p class="fs-5 fw-semi-bold">Schedule your projects to publish at a set day/time to get maximum engagement
+                with your audience.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container mt-5">
+      <div class="row align-items-center das">
+        <div class="col-12 col-md-2 d-flex justify-content-center">
+          <div class="percent fs-1 fw-bold text-light d-flex align-items-center justify-content-center">45%</div>
+        </div>
+        <div class="col-12 col-md-1">
+          <div class="divider d-none d-md-block"></div>
+        </div>
+        <div class="col-12 col-md-7 mt-3 mt-md-0">
+          <div class="fs-4" style="color: #bfd1ff;">Pro members see their views and engagement increase by an average of
+            <span class="text-light fw-bold">45% in their first month</span>
+          </div>
+        </div>
+        <div class="col-12 col-md-2 d-flex justify-content-center mt-3 mt-md-0">
+          <button class="start">Start Free Trial</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="fuy">
+      <div class="fuge icon-wrapper">
+        <img src="./images/svgexport-15.svg" alt="">
+        <i class="fas fa-sack-dollar"></i> <br>
+
+      </div>
+      <p class="earn fs-4">Earn More</p>
+      <p class="get fw-bolder d-flex align-items-center justify-content-center" style="color: black;">Get access to
+        more jobs and earn <br><br><br>more with each job</p>
+      <button class="star">Start Free Trial</button>
+    </div>
+
+    <div class="container">
+      <div class="row align-items-center my-4">
+        <div class="col-12 col-md-6 mb-3 mb-md-0">
+          <img src="./images/imgi_25_pro_pricing_chart_2x (1).webp" alt="Pricing chart"
+            class="img-fluid mx-auto d-block">
+        </div>
+        <div class="col-12 col-md-6">
+          <div class="d-flex align-items-start gap-3">
+            <div class="me-2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor"
+                class="bi bi-play-circle-fill" viewBox="0 0 16 16">
+                <path
+                  d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M6.79 5.093A.5.5 0 0 0 6 5.5v5a.5.5 0 0 0 .79.407l3.5-2.5a.5.5 0 0 0 0-.814z" />
+              </svg>
+            </div>
+            <div>
+              <p class="center fw-bold">Confidently price your projects</p>
+              <p class="fs-5 fw-semi-bold">Expert tools designed to guide you on pricing projects as competitively as
+                possible.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row align-items-center my-4">
+        <div class="col-12 col-md-6 mb-3 mb-md-0">
+          <img src="./images/imgi_26_pro_exclusive_freelance_jobs_2x (1).webp" alt="Exclusive jobs"
+            class="img-fluid mx-auto d-block">
+        </div>
+        <div class="col-12 col-md-6">
+          <div class="d-flex align-items-start gap-3">
+            <div class="me-2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor"
+                class="bi bi-play-circle-fill" viewBox="0 0 16 16">
+                <path
+                  d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M6.79 5.093A.5.5 0 0 0 6 5.5v5a.5.5 0 0 0 .79.407l3.5-2.5a.5.5 0 0 0 0-.814z" />
+              </svg>
+            </div>
+            <div>
+              <p class="center fw-bold">Access exclusive freelance jobs</p>
+              <p class="fs-5 fw-semi-bold">Receive weekly recommendations on freelance jobs that are a best fit for you.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row align-items-center my-4">
+        <div class="col-12 col-md-6 mb-3 mb-md-0">
+          <img src="./images/imgi_27_pro_zero_fees_2x (1).webp" alt="Zero fees" class="img-fluid mx-auto d-block">
+        </div>
+        <div class="col-12 col-md-6">
+          <div class="d-flex align-items-start gap-3">
+            <div class="me-2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor"
+                class="bi bi-play-circle-fill" viewBox="0 0 16 16">
+                <path
+                  d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M6.79 5.093A.5.5 0 0 0 6 5.5v5a.5.5 0 0 0 .79.407l3.5-2.5a.5.5 0 0 0 0-.814z" />
+              </svg>
+            </div>
+            <div>
+              <p class="center fw-bold">0% Platform fees</p>
+              <p class="fs-5 fw-semi-bold">Other marketplaces will take up to 50% of what you earn. With Behance Pro,
+                you pay no platform fees — neither will your clients.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container mt-5">
+      <div class="row align-items-center da">
+        <div class="col-12 col-md-2 d-flex justify-content-center">
+          <div class="percent fs-1 fw-bold text-light d-flex align-items-center justify-content-center">4X</div>
+        </div>
+        <div class="col-12 col-md-1">
+          <div class="divider d-none d-md-block"></div>
+        </div>
+        <div class="col-12 col-md-7 mt-3 mt-md-0">
+          <div class="fs-4" style="color: #bfd1ff;">Pro members on average see 4x the amount of job inquiries and leads
+            after <span class="text-light fw-bold">subscribing to Behance Pro</span></div>
+        </div>
+        <div class="col-12 col-md-2 d-flex justify-content-center mt-3 mt-md-0">
+          <button class="start">Start Free Trial</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="fuy">
+      <div class="fuge icon-wrapper">
+        <img src="./images/svgexport-17.svg" alt="">
+        <i class="fas fa-sack-dollar"></i> <br>
+
+      </div>
+      <p class="ear fs-4">Stand Out From Your Crowd</p>
+      <p class="get fw-bolder d-flex align-items-center justify-content-center" style="color: black;">Personalize your
+        profile to<br><br><br>showcase your unique brand</p>
+      <button class="star">Start Free Trial</button>
+    </div>
+    <!--  -->
+
+    <div class="container">
+      <div class="row align-items-center my-4">
+        <div class="col-12 col-md-6 mb-3 mb-md-0">
+          <img src="./images/imgi_28_pro_go_dark_2x.webp" alt="Go Dark" class="img-fluid mx-auto d-block">
+        </div>
+        <div class="col-12 col-md-6">
+          <div class="d-flex align-items-start gap-3">
+            <div class="me-2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor"
+                class="bi bi-play-circle-fill" viewBox="0 0 16 16">
+                <path
+                  d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M6.79 5.093A.5.5 0 0 0 6 5.5v5a.5.5 0 0 0 .79.407l3.5-2.5a.5.5 0 0 0 0-.814z" />
+              </svg>
+            </div>
+            <div>
+              <p class="center fw-bold">GO Dark</p>
+              <p class="fs-5 fw-semi-bold">Give your profile a sleek, professional look with light and dark mode options
+                to match your style.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row align-items-center my-4">
+        <div class="col-12 col-md-6 mb-3 mb-md-0">
+          <img src="./images/imgi_29_pro_customize_profile_2x (1).webp" alt="Customize profile"
+            class="img-fluid mx-auto d-block">
+        </div>
+        <div class="col-12 col-md-6">
+          <div class="d-flex align-items-start gap-3">
+            <div class="me-2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor"
+                class="bi bi-play-circle-fill" viewBox="0 0 16 16">
+                <path
+                  d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M6.79 5.093A.5.5 0 0 0 6 5.5v5a.5.5 0 0 0 .79.407l3.5-2.5a.5.5 0 0 0 0-.814z" />
+              </svg>
+            </div>
+            <div>
+              <p class="center fw-bold">Flexible Organization</p>
+              <p class="fs-5 fw-semi-bold">Organize your projects and services with custom sections, making it easy for
+                clients to navigate and explore your work.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row align-items-center my-4">
+        <div class="col-12 col-md-6 mb-3 mb-md-0">
+          <img src="./images/imgi_30_pro_drive_engagement_2x.webp" alt="Drive engagement"
+            class="img-fluid mx-auto d-block">
+        </div>
+        <div class="col-12 col-md-6">
+          <div class="d-flex align-items-start gap-3">
+            <div class="me-2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor"
+                class="bi bi-play-circle-fill" viewBox="0 0 16 16">
+                <path
+                  d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M6.79 5.093A.5.5 0 0 0 6 5.5v5a.5.5 0 0 0 .79.407l3.5-2.5a.5.5 0 0 0 0-.814z" />
+              </svg>
+            </div>
+            <div>
+              <p class="center fw-bold">Drive more engagement</p>
+              <p class="fs-5 fw-semi-bold">Show people the best way to engage with you by adding a custom button to your
+                profile and projects.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row align-items-center my-4">
+        <div class="col-12 col-md-6 mb-3 mb-md-0">
+          <img src="./images/imgi_31_pro_custom_website_2x (1).webp" alt="Custom website"
+            class="img-fluid mx-auto d-block">
+        </div>
+        <div class="col-12 col-md-6">
+          <div class="d-flex align-items-start gap-3">
+            <div class="me-2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor"
+                class="bi bi-play-circle-fill" viewBox="0 0 16 16">
+                <path
+                  d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M6.79 5.093A.5.5 0 0 0 6 5.5v5a.5.5 0 0 0 .79.407l3.5-2.5a.5.5 0 0 0 0-.814z" />
+              </svg>
+            </div>
+            <div>
+              <p class="center fw-bold">Your own custom website</p>
+              <p class="fs-5 fw-semi-bold">Your Pro membership includes full access to Adobe Portfolio. Build up to 5
+                fully-branded websites with free hosting and custom domains.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="dont">
+      <hr>
+      <p class="succe ms-md-5">Success Story</p>
+      <p class="foy ms-md-5">Creators like you are <br> thriving with Behance Pro</p>
+      <p class="fs-4 ms-md-5">Read more about how some of the world's best freelancers, art <br>directors, and creatives
+        use Behance Pro to grow their creative <br> careers on <span class="text-decoration-underline">our blog.</span>
+      </p>
+    </div>
+
+    <!--  -->
+
+    <div class="container py-5">
+      <div class="row g-4">
+        <!-- Card 1 -->
+        <div class="col-md-4">
+          <div class="testimonial-card h-100">
+            <p>
+              Behance Pro has been great. I have noticed I am getting
+              <strong>more serious freelance inquiries</strong> since signing up for Pro.
+            </p>
+            <p>
+              For me the best feature is the no fees on payments: that is a really big deal. Most other marketplaces do
+              a 50/50 split, but Behance pays out a lot so that was my main reason for going pro.
+            </p>
+            <div class="author">
+              <img src="https://i.pravatar.cc/40?img=1" alt="Harbor Bickmore">
+              <span class="author-name">Harbor Bickmore</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="col-md-4">
+          <div class="testimonial-card h-100">
+            <p>
+              I have had Behance for more than ten years. I have seen so many features and changes all these years, and
+              Behance Pro is
+              <strong>a new giant leap for the best creative platform.</strong>
+            </p>
+            <div class="author">
+              <img src="https://i.pravatar.cc/40?img=2" alt="Danny Ivan"> <br><br><br><br><br><br><br><br><br><br><br>
+              <span class="author-name">Danny Ivan</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="col-md-4">
+          <div class="testimonial-card h-100">
+            <p>
+              Behance has been <strong>my main source of clients this year.</strong> I love Behance Pro, especially the
+              analytics feature — it's great for tweaking my portfolio and hashtags.
+            </p>
+            <div class="author">
+              <img src="https://i.pravatar.cc/40?img=3" alt="Kate Anto">
+              <br><br><br><br><br><br><br><br><br><br><br><br>
+              <span class="author-name">Kate Anto</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mik">
+      <p class="yo">Start your 7 day free trial today</p>
+      <p class="d-flex align-items-center justify-content-center fs-5">Take your creative career to the next level by
+        upgrading to Behance Pro.</p>
+      <div class="container">
+        <div class="row justify-content-center g-4">
+
+          <!-- Free Plan -->
+          <div class="col-md-5">
+            <div class="pricin-card h-100">
+              <h3 class="pricing-title">Behance</h3>
+              <p class="pricing-subtitl">
+                Foundational tools to showcase your work and find creative opportunities.
+              </p>
+              <h1 class="pric">Free</h1>
+
+              <ul class="feature-list">
+                <li><i class="bi bi-check-circle"></i> Publish projects to showcase your work</li>
+                <li><i class="bi bi-check-circle"></i> Discover and save inspiration</li>
+                <li><i class="bi bi-check-circle"></i> Offer freelance services</li>
+                <li><i class="bi bi-check-circle"></i> Send client proposals</li>
+                <li><i class="bi bi-check-circle"></i> Sell assets</li>
+                <li><i class="bi bi-check-circle"></i> Message others and connect with the community</li>
+                <li><i class="bi bi-check-circle"></i> Access to our full-time job board</li>
+                <li><i class="bi bi-check-circle"></i> Transact on Behance with 15–30% platform fees</li>
+                <li><i class="bi bi-check-circle"></i>See basic starts for your projects</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Pro Plan -->
+          <div class="col-md-5">
+            <div class="pricing-card pro h-100">
+              <h3 class="pricing-title">Behance <span class="badge-pro">PRO</span></h3>
+              <p class="pricing-subtitle">
+                High performance tools designed to help you stand out and earn more.
+              </p>
+              <h1 class="price">₦17,200.00<span>/mo</span></h1>
+
+              <ul class="feature-lis">
+                <li><i class="bi bi-check-circle"></i> Publish projects to showcase your work</li>
+                <li><i class="bi bi-check-circle"></i> Discover and save inspiration</li>
+                <li><i class="bi bi-check-circle"></i> Offer freelance services</li>
+                <li><i class="bi bi-check-circle"></i> Send client proposals</li>
+                <li><i class="bi bi-check-circle"></i> Sell assets</li>
+                <li><i class="bi bi-check-circle"></i> Message others and connect with the community</li>
+                <li><i class="bi bi-check-circle"></i> Access to our full-time job board</li>
+                <li><i class="bi bi-check-circle"></i> 0% platform fees on all transactions</li>
+                <li><i class="bi bi-check-circle"></i>Advanced analytics on your profile and projects</li>
+                <li><i class="bi bi-check-circle"></i>See your top traffic sources and search terms</li>
+                <li><i class="bi bi-check-circle"></i>Mark yourself as being available for work
+                </li>
+                <li><i class="bi bi-check-circle"></i>Exclusive recommended freelance jobs</li>
+                <li><i class="bi bi-check-circle"></i>Promote your work to targeted audiences (Boost)
+                </li>
+                <li><i class="bi bi-check-circle"></i>Password protected projects and link-only projects</li>
+                <li><i class="bi bi-check-circle"></i>Automatic project scheduling</li>
+                <li><i class="bi bi-check-circle"></i>Automatic project scheduling</li>
+                <li><i class="bi bi-check-circle"></i>Profile personalization options including dark theme,
+                  <br>customizable button, and sections
+                </li>
+                <button class="str">Start Your Free Trial</button>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+    <footer class="behance-footer py-5 text-light">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-md-3 mb-4 mb-md-0">
+            <h2 class="behance-logo-text mb-4">Behance</h2>
+          </div>
+
+          <div class="col-6 col-sm-3 col-md-2 mb-3 text-light">
+            <h5 class="footer-heading">Built For Creatives</h5>
+            <ul class="list-unstyled">
+              <li><a href="#" class="footer-link">Try Behance Pro</a></li>
+              <li><a href="#" class="footer-link">Find Inspiration</a></li>
+              <li><a href="#" class="footer-link">Get Hired</a></li>
+              <li><a href="#" class="footer-link">Sell Creative Assets</a></li>
+              <li><a href="#" class="footer-link">Sell Freelance Services</a></li>
+            </ul>
+          </div>
+
+          <div class="col-6 col-sm-3 col-md-2 mb-3">
+            <h5 class="footer-heading">Find Talent</h5>
+            <ul class="list-unstyled">
+              <li><a href="#" class="footer-link">Post a Job</a></li>
+              <li><a href="#" class="footer-link">Graphic Designers</a></li>
+              <li><a href="#" class="footer-link">Photographers</a></li>
+              <li><a href="#" class="footer-link">Video Editors</a></li>
+              <li><a href="#" class="footer-link">Web Designers</a></li>
+              <li><a href="#" class="footer-link">Illustrators</a></li>
+            </ul>
+          </div>
+
+          <div class="col-6 col-sm-3 col-md-2 mb-3">
+            <h5 class="footer-heading">Behance</h5>
+            <ul class="list-unstyled">
+              <li><a href="#" class="footer-link">About Behance</a></li>
+              <li><a href="#" class="footer-link">Adobe Portfolio</a></li>
+              <li><a href="#" class="footer-link">Download the App</a></li>
+              <li><a href="#" class="footer-link">Blog</a></li>
+              <li><a href="#" class="footer-link">Careers</a></li>
+              <li><a href="#" class="footer-link">Help Center</a></li>
+              <li><a href="#" class="footer-link">Contact Us</a></li>
+              <li><a href="#" class="footer-link">Login</a></li>
+            </ul>
+          </div>
+
+          <div class="col-6 col-sm-3 col-md-3 mb-3">
+            <h5 class="footer-heading">Social</h5>
+            <ul class="list-unstyled">
+              <li><a href="#" class="footer-link-social"><i class="fab fa-instagram me-2">
+                    <img src="./icon/svgexport-63.svg" alt="" class="img-fluid" style="max-width:25px;">
+                  </i>Instagram</a></li>
+              <li><a href="#" class="footer-link-social"><i class="fab fa-twitter me-2">
+                    <img src="./icon/svgexport-64.svg" alt="" class="img-fluid" style="max-width:25px;">
+                  </i>Twitter</a></li>
+              <li><a href="#" class="footer-link-social"><i class="fab fa-pinterest me-2">
+                    <img src="./icon/svgexport-65.svg" alt="" class="img-fluid" style="max-width:25px;">
+                  </i>Pinterest</a></li>
+              <li><a href="#" class="footer-link-social"><i class="fab fa-facebook me-2">
+                    <img src="./icon/svgexport-66.svg" alt="" class="img-fluid" style="max-width:25px;">
+                  </i>Facebook</a></li>
+              <li><a href="#" class="footer-link-social"><i class="fab fa-linkedin me-2">
+                    <img src="./icon/svgexport-67.svg" alt="" class="img-fluid" style="max-width:25px;">
+                  </i>LinkedIn</a></li>
+            </ul>
+          </div>
+          <footer class="behance-footer-bottom pt-5 pb-3">
+            <div class="container">
+              <hr class="footer-separator mt-0 mb-4">
+
+              <div class="row align-items-center">
+
+                <div class="col-12 col-lg-5 align-items-center mb-3 mb-lg-0">
+                  <span class="adobe-logo-text me-2">A</span><span class="adobe-brand-text">Adobe</span>
+                  <span class="copyright-text ms-4">© 2025 Adobe Inc. All rights reserved.</span>
+                </div>
+
+
+                <div class="col-12 col-lg-7">
+                  <ul class="list-unstyled d-flex flex-wrap mb-0 policy-links">
+                    <li><a href="#" class="policy-link me-3 me-md-4">English</a></li>
+                    <li><a href="#" class="policy-link me-3 me-md-4">TOU</a></li>
+                    <li><a href="#" class="policy-link me-3 me-md-4">Privacy</a></li>
+                    <li><a href="#" class="policy-link me-3 me-md-4">Community</a></li>
+                    <li><a href="#" class="policy-link me-3 me-md-4">Cookie preferences</a></li>
+                    <li><a href="#" class="policy-link me-3 me-md-4">Do not sell or share my personal information</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </footer>
+
+        </div>
+      </div>
+    </footer>
+
+
+
+    <!--  -->
+
+
+
+
+    <!-- </section> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
+      integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
+      crossorigin="anonymous"></script>
+</body>
+
+</html>

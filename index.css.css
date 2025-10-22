@@ -1,0 +1,721 @@
+/* Shared grid styles */
+.behance-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+}
+
+.first-section {
+    display: flex;
+    justify-content: center;
+}
+
+/* Left grid position */
+.left-grid {
+    left: 40px;
+}
+
+/* Right grid position */
+.right-grid {
+    right: 40px;
+}
+
+/* Image box styles */
+.behance-grid img {
+    width: 125px;
+    height: 125px;
+    object-fit: cover;
+    border-radius: 12px;
+    background-color: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover zoom and shadow lift */
+.behance-grid img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.12);
+}
+
+/* Zig-zag offset effect */
+.behance-grid img:nth-child(odd) {
+    margin-left: 0;
+}
+
+.behance-grid img:nth-child(even) {
+    margin-left: 45px;
+}
+
+/* Mirror the zig-zag for right grid */
+.right-grid img:nth-child(even) {
+    margin-left: 0;
+}
+
+.demola {
+    align-items: center;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.refre {
+    margin-top: 180px;
+    font-size: 80px;
+    letter-spacing: -0.05em;
+    line-height: 68px;
+    font-family: acumin-pro-wide, Acumin Pro Wide, Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-weight: 600;
+    max-width: 70vw;
+}
+
+.right-grid img:nth-child(odd) {
+    margin-left: 45px;
+}
+
+.daniel {
+    font-family: acumin-pro-wide, Acumin Pro Wide, Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    width: 100%;
+    color: var(--be-text-primary);
+    font-size: 20px;
+    letter-spacing: -0.02em;
+    line-height: 30px;
+}
+
+/* ===== Second section: search + filter (inserted after hero) ===== */
+.search-filter-section {
+    overflow: hidden;
+    /* prevent children from causing horizontal overflow */
+    background-color: #fff;
+}
+
+.search-input-group {
+    align-items: center;
+    box-shadow: none;
+    max-width: 100%;
+}
+
+.search-input-group .search-icon {
+    border: 0;
+    padding: 8px 10px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #6c757d;
+    background: transparent;
+}
+
+.search-input-group .form-control {
+    border-radius: 999px;
+    padding-left: .5rem;
+    border-left: 0;
+    box-shadow: none;
+    min-height: 44px;
+}
+
+.category-carousel .carousel-inner {
+    overflow: visible;
+}
+
+.category-carousel .carousel-item {
+    padding: 6px 0;
+}
+
+.category-carousel .d-flex.flex-nowrap {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* Projects gallery (25 items, responsive grid with 5 columns on large) */
+.projects-section {
+    background: #fff;
+    color: #111;
+}
+
+.projects-grid {
+    display: grid;
+    gap: 1.25rem;
+    grid-template-columns: repeat(2, 1fr);
+    /* mobile default */
+}
+
+/* responsive column counts */
+@media (min-width: 576px) {
+    .projects-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 768px) {
+    .projects-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* use 5 columns at wide desktop (>=1200px) */
+@media (min-width: 1200px) {
+    .projects-grid {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+
+/* each card */
+.project-card {
+    background: transparent;
+    border-radius: 6px;
+    overflow: visible;
+    position: relative;
+}
+
+/* image container with consistent aspect ratio */
+.card-media {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 8px;
+    background: #f6f7f8;
+    aspect-ratio: 4 / 3;
+    /* keeps consistent height */
+}
+
+.card-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform .28s ease;
+}
+
+/* slight zoom on hover */
+.project-card:hover .card-media img {
+    transform: scale(1.03);
+}
+
+/* overlay top-right Save button */
+.card-overlay {
+    position: absolute;
+    inset: 8px 8px auto auto;
+    /* top-right */
+    display: flex;
+    gap: .5rem;
+    pointer-events: none;
+    /* let the button receive pointer events only */
+}
+
+.save-btn {
+    pointer-events: auto;
+    transform: translateY(-6px);
+    opacity: 0;
+    transition: opacity .16s ease, transform .16s ease;
+    background: rgba(255, 255, 255, 0.95);
+    border: 0;
+    padding: 6px 10px;
+    font-weight: 600;
+    border-radius: 999px;
+    box-shadow: 0 6px 18px rgba(16, 24, 40, 0.06);
+    color: #111;
+    cursor: pointer;
+    font-size: .85rem;
+}
+
+/* reveal Save on hover or focus within card */
+.project-card:hover .save-btn,
+.project-card:focus-within .save-btn {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* card meta below image */
+.card-meta {
+    padding-top: .5rem;
+}
+
+.project-title {
+    font-size: .95rem;
+    margin: 0;
+}
+
+.project-sub {
+    font-size: .82rem;
+    color: #6b7786;
+}
+
+/* small stats row */
+.project-stats {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    color: #6b7786;
+    font-size: .82rem;
+}
+
+/* keep cards from causing horizontal overflow */
+.projects-section,
+.projects-grid,
+.project-card,
+.card-media {
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+/* small-screen adjustments */
+@media (max-width: 420px) {
+    .card-media {
+        aspect-ratio: 3 / 2;
+    }
+
+    .save-btn {
+        padding: 5px 8px;
+        font-size: .8rem;
+    }
+}
+
+/* pill style and fixed visual height */
+.category-pill {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 18px;
+    min-width: 120px;
+    height: 44px;
+    border-radius: 12px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("https://imgs.search.brave.com/EIbIIjyJWatARyd39rEr4WENTJDhENIQfzA4RzKYvJ4/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvNjIx/OTI1NTc2L3Bob3Rv/L3RleHR1cmUtZGFy/ay1jb25jcmV0ZS1m/bG9vci5qcGc_cz02/MTJ4NjEyJnc9MCZr/PTIwJmM9RU5lQ3hx/azBFb2h2Z2VKTmJz/em1LTmhENGpUUHND/dzZuSUs5QTdSWjd4/dz0");
+    color: white;
+    font-weight: 600;
+    white-space: nowrap;
+    flex: 0 0 auto;
+    box-shadow: 0 6px 18px rgba(16, 24, 40, 0.06);
+}
+
+/* make first pill look active (optional) */
+.category-pill:first-child {
+    background: #111;
+    color: #fff;
+    min-width: 140px;
+}
+
+/* controls placement and size */
+.category-carousel .carousel-control-prev,
+.category-carousel .carousel-control-next {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 6px 18px rgba(16, 24, 40, 0.06);
+}
+
+body {
+    overflow-x: hidden;
+}
+
+/* smaller controls on small screens, optionally hide */
+@media (max-width: 575.98px) {
+    .category-pill {
+        min-width: 96px;
+        padding: 7px 12px;
+        height: 40px;
+        font-size: .92rem;
+    }
+
+    .category-carousel .carousel-control-prev,
+    .category-carousel .carousel-control-next {
+        width: 36px;
+        height: 36px;
+    }
+}
+
+/* remove native scrollbar visual on WebKit while preserving scroll */
+.category-carousel .d-flex.flex-nowrap::-webkit-scrollbar {
+    display: none;
+}
+
+/* safety: ensure carousel doesn't cause horizontal page overflow */
+.category-carousel,
+.category-carousel .container,
+.category-carousel .carousel-inner,
+.category-carousel .d-flex {
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+@media (max-width: 575.98px) {
+    .search-input-group .form-control {
+        min-height: 44px;
+        font-size: 0.95rem;
+    }
+
+    .search-input-group .search-icon {
+        padding-left: 8px;
+        padding-right: 6px;
+    }
+
+    .search-filter-section .nav {
+        gap: .25rem;
+    }
+}
+
+/* Keep the whole section from expanding page width */
+.search-filter-section .container {
+    max-width: 1200px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+/* Small spacing tweaks so pills and dropdowns don't wrap awkwardly */
+.search-filter-section .nav-link {
+    white-space: nowrap;
+    border-radius: 999px;
+}
+
+/* ensure filter button text hides on very small screens to save space */
+@media (max-width: 420px) {
+    .search-filter-section .btn .d-none.d-sm-inline {
+        display: none !important;
+    }
+}
+
+/* safety: block horizontal overflow from inner elements */
+.search-filter-section,
+.search-filter-section * {
+    box-sizing: border-box;
+}
+
+/* End added rules */
+
+/* Responsive behavior */
+@media (max-width: 992px) {
+    .behance-grid {
+        display: none;
+        /* Hide side grids on small screens */
+    }
+}
+
+/*  */
+
+
+.signin-container {
+    background-color: white;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    /* if this element lives inside the .projects-grid (CSS Grid),
+               force it to span all columns and center itself */
+    grid-column: 1 / -1;
+    margin: 2rem auto;
+    /* center the grid item itself (in case parent grid uses align/justify settings) */
+    justify-self: center;
+    /* ensure it isn't affected by floats */
+    float: none;
+}
+
+h1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #333;
+}
+
+.btn-signin {
+    border-radius: 20rem;
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s;
+}
+
+.btn-signin:hover {
+    background-color: #f8f9fa;
+    border: 1px solid #ccc;
+}
+
+.btn-google {
+    color: #757575;
+    border-radius: 20rem;
+}
+
+.btn-facebook {
+    color: #1877F2;
+    border-radius: 20rem;
+}
+
+.btn-apple {
+    color: #000;
+    border-radius: 20rem;
+}
+
+.view-more {
+    text-align: center;
+    margin: 15px 0;
+    color: #007bff;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.view-more:hover {
+    text-decoration: underline;
+}
+
+.or-divider {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+    color: #666;
+}
+
+.or-divider::before,
+.or-divider::after {
+    content: "";
+    flex: 1;
+    border-bottom: 1px solid #ddd;
+}
+
+.or-divider span {
+    padding: 0 10px;
+}
+
+.hi {
+    background-color: grey;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.hi:hover {
+    background-color: black;
+}
+
+/* Right-align the continue button inside the sign-in box */
+.signin-container .hi {
+    display: block;
+    margin-left: auto;
+    margin-right: 0;
+    margin-top: 1rem;
+}
+
+/* Show dropdown on hover for desktop devices */
+@media (hover: hover) and (min-width: 768px) {
+    .navbar-nav .nav-item.dropdown:hover>.dropdown-menu {
+        display: block;
+        margin-top: 0.5rem;
+    }
+}
+
+
+/*  */
+
+
+/* Custom styles for the Behance-like footer */
+.behance-footer {
+    background-color: #262626;
+    /* Dark background color */
+    color: #f0f0f0;
+    /* Light text color for general content */
+    font-family: Arial, sans-serif;
+    /* Common web font */
+}
+
+/* Style for the main Behance logo text */
+.behance-logo-text {
+    color: white;
+    /* Brighter white for the logo */
+    font-size: 2.5rem;
+    /* Large font size */
+    font-weight: bold;
+    margin-top: 0;
+}
+
+/* Style for the column headings (e.g., "Built For Creatives") */
+.footer-heading {
+    color: white;
+    /* White color for headings */
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    /* Space below the heading */
+}
+
+/* Style for the actual links */
+.footer-link,
+.footer-link-social {
+    color: #adadad;
+    /* Lighter grey/silver for the links */
+    text-decoration: none;
+    /* Remove underline */
+    line-height: 2.2;
+    /* Spacing between links */
+    font-size: 0.95rem;
+    transition: color 0.2s;
+    /* Smooth transition for hover effect */
+}
+
+.footer-link:hover,
+.footer-link-social:hover {
+    color: white;
+    /* Change color to white on hover */
+    text-decoration: underline;
+}
+
+/* Adjust the social links to match the link style */
+.footer-link-social {
+    display: flex;
+    /* Aligns icon and text */
+    align-items: center;
+}
+
+.footer-link-social i {
+    font-size: 1.1rem;
+    /* Adjust icon size */
+}
+
+/* Ensure no default bullet points */
+.list-unstyled {
+    padding-left: 0;
+    list-style: none;
+}
+
+*/
+
+/*
+    .pricing-subtitl {
+      color: #555;
+      font-size: 15px;
+      margin-bottom: 24px;
+    }
+
+    .pric {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #1c1c1c;
+      margin-bottom: 16px;
+    }
+
+    .pric span {
+      font-size: 1rem;
+      color: #555;
+      font-weight: 400;
+    }
+
+    .feature-lis {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .feature-lis li {
+      margin-bottom: 12px;
+      font-size: 15px;
+    }
+
+    .feature-lis i {
+      color: green;
+      margin-right: 8px;
+    }
+
+    .badge-pro {
+      background-color: #0061ff;
+      color: white;
+      font-size: 0.8rem;
+      padding: 4px 8px;
+      border-radius: 6px;
+      margin-left: 8px;
+    }
+
+    .container {
+      margin-top: 60px;
+    }
+
+
+    /* Custom styles for the Behance-like footer bottom bar */
+.behance-footer-bottom {
+    background-color: #262626;
+    /* Dark background color (matches the section above) */
+    color: #adadad;
+    /* Light grey text color */
+    font-family: Arial, sans-serif;
+    font-size: 0.85rem;
+}
+
+/* Style for the thin horizontal rule */
+.footer-separator {
+    border-top: 1px solid #444444;
+    /* Darker grey line for separation */
+    opacity: 1;
+    /* Ensure line is fully visible */
+}
+
+/* Styling the "Adobe" branding */
+.adobe-logo-text {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    /* The "A" is usually whiter */
+    /* Using a specific class to style the letter A as a block/logo */
+}
+
+.adobe-brand-text {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #adadad;
+}
+
+.copyright-text {
+    color: #adadad;
+}
+
+/* Styling the policy links list */
+.policy-links {
+    padding-left: 0;
+    list-style: none;
+    /* Use flexbox utilities (d-flex, flex-wrap) in HTML for layout */
+}
+
+/* Style for the individual policy links */
+.policy-link {
+    color: #adadad;
+    /* Grey color for the links */
+    text-decoration: none;
+    line-height: 1.5;
+    white-space: nowrap;
+    /* Prevents a link from breaking onto two lines */
+    font-size: 0.9rem;
+    transition: color 0.2s;
+}
+
+.policy-link:hover {
+    color: white;
+    /* Change color to white on hover */
+    text-decoration: underline;
+}
+
+/* Responsive adjustments for the link wrapping */
+@media (max-width: 991px) {
+
+    /* Adjust spacing on smaller screens */
+    .policy-links li {
+        margin-bottom: 0.5rem;
+        /* Add vertical space when links wrap */
+    }
+}
